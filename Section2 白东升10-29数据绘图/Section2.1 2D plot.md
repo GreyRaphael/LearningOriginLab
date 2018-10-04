@@ -1,44 +1,40 @@
 # 2D Plot
 
-- [2D Plot](#2d-plot)
-	- [Group to change color](#group-to-change-color)
-	- [2D Plot feature and application](#2d-plot-feature-and-application)
-	- [Excel Plot](#excel-plot)
-	- [Function Plot](#function-plot)
-	- [Summary](#summary)
-	- [statistics plot](#statistics-plot)
+<!-- TOC -->
 
- when in the workbook there many kinds of plot, while in the Matrix the kinds is less;
+- [2D Plot](#2d-plot)
+    - [Group to change color](#group-to-change-color)
+    - [2D Plot feature and application](#2d-plot-feature-and-application)
+    - [Excel Plot](#excel-plot)
+    - [Function Plot](#function-plot)
+    - [Summary](#summary)
+    - [statistics plot](#statistics-plot)
+
+<!-- /TOC -->
+
+workbook的绘图类型比matrix的绘图类型多一些
 
 When want to plot the Y, it will auto find its X
 
-When want to add a Y to existed Graph:
-
-![](res/2plot01.png)
-
-Wait to appear that symbol, then to drag
+Add a Y to existed Graph:
+> ![](res/2plot01.png), then drag to Graph
 
 ## Group to change color
 
-![](res/2plot02.png)
-
 先取消所有Group, 然后再将它们弄到一个Group就可以实现颜色的区分了
+> ![](res/2plot02.png)
 
 具体的绘图：
+> ![](res/2plot03.png)
 
-![](res/2plot03.png)
-
-红色部分可以和workbook中的不一致，绘图的结果以这个为准，不影响workbook中的数据
-不同的Plot Type, 不能放到同一个Group中
-
-![](res/2plot04.png)
+- 红色部分可以和workbook中的不一致，绘图的结果以这个为准，不影响workbook中的数据
+- 不同的Plot Type, 不能放到同一个Group中
 
 使用workbook指定的XY…
+> ![](res/2plot04.png)
 
-把Word中的Origin Graph生成数据：
-双击word中的Graph,进行编辑，Create Workbook
-
-![](res/2plot05.png)
+把Word中的Origin Graph生成数据：双击word中的Graph,进行编辑，Create Workbook
+> ![](res/2plot05.png)
 
 ## 2D Plot feature and application
 
