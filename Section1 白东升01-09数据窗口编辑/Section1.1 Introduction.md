@@ -13,3 +13,5 @@ Shortcuts
 
 Toolbar
 > ![](res/toolbarRef.png)
+
+Custom Toolbar: <kbd>Ctrl</kbd>+<kbd>T</kbd>
