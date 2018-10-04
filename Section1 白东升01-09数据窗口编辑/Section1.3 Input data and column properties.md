@@ -9,7 +9,7 @@ Origin默认32行2列，可以在最后一行按 <kbd>↓</kbd> 来增加新行
 
 可以在一个cell的右下角拖动**Cross**来复制数据
 
-## Column Properties
+## Column
 
 Add New Columns: <kbd>Ctrl</kbd>+<kbd>D</kbd>
 
@@ -39,3 +39,14 @@ Worksheet Properties: <kbd>F4</kbd>
 > ![](res/column09.png)
 
 绘图的时候，会使用这时的**起点**和**间隔**来作为X坐标，而不使用左侧的**X**列
+
+## Column Properties
+
+Double Click on the Short-Name
+> ![](res/editWorkbook01.png)  
+
+根据当前列的属性衍生出右边列的属性
+> ![](res/editWorkbook03.png)
+
+User Tree: 保存与当前列有关的信息，导入文件时，会存储有关的信息
+> ![](res/editWorkbook04.png)
