@@ -1,29 +1,37 @@
 # Windows
 
-File/New(Ctrl + N): 8 types,with **Workbook**, **Graph**, **Matrix**, you can set the Template
+File/New: Project, Workbook, Excel, Graph, Layout, Notes, Matrix, Function
+> **Workbook**, **Graph**, **Matrix**可以设置Template
 
-![new](res/new.png)
+Save current window: Right click the window header, `Save as`
 
-Save current window: Right click the window header, `Save as`…
-
-Double click to change the Column Header, File/Save Template AS…
+双击列标题，可以修改Column Properties, File/Save Template As.
 
 ## Project
 
+View/Project Explorer
+
 ## Workbook
+
+一个workbook可以121个worksheet, 一个worksheet可以100w行1w列
+
+Ctrl+Drag worksheet到空白位置，新建一个workbook并且复制之前的worksheet;
+
+shortName作为列头`A(x)`中的`A`，longName作为坐标轴的名称
+
+Ctrl+双击Text Tools写的文本,进入object properties
 
 ## Excel
 
 ## Graph
 
 New Graph Layer:
-
-Project Explorer(`Alt + 1`), Right click, New Window/Graph
-
 - 1.Toolbar Graph/New Layer(axes)
 - 2.Right click on the Graph Blank, New Layer(axes)
 
 ## Layout
+
+组织和显示相关内容，方便排版输出
 
 ## Notes
 
