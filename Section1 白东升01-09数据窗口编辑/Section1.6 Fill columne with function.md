@@ -1,17 +1,20 @@
 # Fill column with Function
 
-- [Fill column with Function](#fill-column-with-function)
+Fill Column With:
+- Row Numbers
+- Uniform
+- Normal Random
+- A set of Numbers
+- ...
 
-Column Set Values: **Ctrl +Q**
-
-Wcol and Col is the same, just the name is different
-
-Origin first calculate the Scripts, then calculate the **formula**
+Column Set Values: <kbd>Ctrl</kbd>+<kbd>Q</kbd>
+> Wcol and Col is the same, just the name is different  
+> Origin first calculate the **Scripts**, then calculate the **formula**
 
 ![](res/columnFunc01.png)
 
 ```bash
-#自增
+#自增量
 Col("time")[i+1]-Col("time")[i]
 ```
 
@@ -29,7 +32,6 @@ Data(1,63,2)
 
 ```bash
 #Fibonacci
-
 Col(E)[1]=1;
 Col(E)[2]=1;
 for(k=3;k<=25;k++)
@@ -39,8 +41,7 @@ for(k=3;k<=25;k++)
 ```
 
 当要用的列在其他文件夹下面，就不能用Col, wcol就只能用Scripts
-
-![](res/columnFunc04.png)
+> ![](res/columnFunc04.png)
 
 ```bash
 range=s1[book1]sheet1!A;
