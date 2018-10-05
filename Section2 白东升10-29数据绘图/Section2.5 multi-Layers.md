@@ -1,39 +1,39 @@
 # Multi-Layers
 
+<!-- TOC -->
+
 - [Multi-Layers](#multi-layers)
     - [How to Draw Graph](#how-to-draw-graph)
         - [Method1](#method1)
         - [Method2](#method2)
         - [Method3](#method3)
         - [Method4](#method4)
-    - [把多个图形分解到多个图层](#%E6%8A%8A%E5%A4%9A%E4%B8%AA%E5%9B%BE%E5%BD%A2%E5%88%86%E8%A7%A3%E5%88%B0%E5%A4%9A%E4%B8%AA%E5%9B%BE%E5%B1%82)
+    - [Other Operation](#other-operation)
     - [Layer Management](#layer-management)
 
-Linked: means that the layer will link the current one
+<!-- /TOC -->
 
-![](res/multiLayer01.png)
+<kbd>Ctrl</kbd> + Drag: 按比例缩放Graph
+> ![](res/multiLayer00.png)
 
-Ctrl +Drag: keep ratio to zoom in or out Graph
+Linked: 新Layer与当前的坐标轴部分是相同的
+> ![](res/multiLayer01.png)
 
-View/Show/Layer Grid, Format/Snap Graph to Grid, then move the Graph
-
-You can change the Grid size by Tools/Options/Page/Grid spacing….
-
-If a layer is too big, Right Click the Outer, Fit Layers to Page
+精确调整Graph位置: View/Show/Layer Grid, Format/Snap Graph to Grid, then move the Graph
+> 其中Grid size可以在Tools/Options/Page/Grid spacing….中设置  
+> 如果Graph跑到了outer， 那么右键Fit Page to Layers
 
 ## How to Draw Graph
 
 ### Method1
 
-Ctrl +N, to new Graph;
+<kbd>Ctrl</kbd>+<kbd>N</kbd>, to new Graph;
 
-Double Click the "red" to open the Layer Content
+Right Click the "red" to open the Layer Content
+> ![](res/multiLayer02.png)
 
-![](res/multiLayer02.png)
-
-Or Alt +Double Click the "Red" to open the Plot Setup;
-
-![](res/multiLayer03.png)
+Or Right Click the "red" to open the Plot Setup;
+> ![](res/multiLayer03.png)
 
 ### Method2
 
@@ -47,13 +47,14 @@ Select multi-columns, Select a layer, Graph/Add Plot to layer
 
 Copy-Paste the Graph
 
-## 把多个图形分解到多个图层
+## Other Operation
 
-![](res/multiLayer04.png)
+把多个图形分解到多个图层: Extract to Layers
+> ![](res/multiLayer04.png)
 
-Extract to Graph(分解成多个窗口)
+把多个图形分解到多个窗口: Extract to Graph
 
-Merge(多窗口合并成多个图层)
+多窗口合并成多个图层: Merge
 
 ## Layer Management
 
