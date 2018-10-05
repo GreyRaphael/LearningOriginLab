@@ -1,18 +1,21 @@
 # With Other Math program
 
+<!-- TOC -->
+
 - [With Other Math program](#with-other-math-program)
     - [with Matlab](#with-matlab)
     - [with Mathematica](#with-mathematica)
     - [with LabView](#with-labview)
 
+<!-- /TOC -->
+
 ## with Matlab
 
 Origin可以直接导入MATLAB的.mat文件:File/Import/Matlab
 
-Tools/MATLAB console
+Tools/MATLAB console: 可以在不打开MATLAB的基础上，调用kernel
 
-数据交换
-
+数据交换: Tool/MATLAB console
 - Pr: origin's real matrix to matlab;
 - Gr: matlab's real matrix to origin;
 
