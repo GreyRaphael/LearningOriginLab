@@ -1,27 +1,20 @@
 # Origin C
 
+<!-- TOC -->
+
 - [Origin C](#origin-c)
-    - [Example: 输出乘法表](#example-%E8%BE%93%E5%87%BA%E4%B9%98%E6%B3%95%E8%A1%A8)
-    - [Example: 自定义按钮](#example-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%89%E9%92%AE)
-    - [Example: 自定义工具栏按钮](#example-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B7%A5%E5%85%B7%E6%A0%8F%E6%8C%89%E9%92%AE)
+    - [Example: 输出乘法表](#example-输出乘法表)
+    - [Example: 自定义按钮](#example-自定义按钮)
+    - [Example: 自定义工具栏按钮](#example-自定义工具栏按钮)
 
-处理大数据的时候，速度较快
+<!-- /TOC -->
 
-- View/Code Builder;
-- Alt+4
+OriginC处理大量运算时，速度较快: View/Code Builder
 
 OriginC vs C:
-
-- Origin C不支持C language的main函数
-- 与C语言一样，OriginC也不是完全OOP架构的的语言，由一些基本数据类型、一些全局函数、大量的class构成
+- Origin C不支持C的main函数
 - OriginC不支持2维以上的数组，二维数组用matrix代替`matrix<int> myMatrix(4,3)`
-- OriginC中`^`表示幂
-
-OriginC vs C++:
-
-OriginC vs C#:
-
-![](res/originc01.png)
+> ![](res/originc01.png)
 
 ## Example: 输出乘法表
 
@@ -44,7 +37,7 @@ void fillnumbers()
 }
 ```
 
-![](res/originc02.png)
+> ![](res/originc02.png)
 
 ## Example: 自定义按钮
 
@@ -69,24 +62,18 @@ void plot(string strTemplate, string strData)
 ```
 
 Add a text to the workbook, right-click, **Programming Control**
-
-![](res/originc03.png)
-![](res/originc04.png)
-
-![](res/originc05.png)
+> ![](res/originc03.png)
+> ![](res/originc04.png)  
+> ![](res/originc05.png)
 
 ## Example: 自定义工具栏按钮
 
 New a ogs file:
-
-![](res/originc06.png)
+> ![](res/originc06.png)
 
 View/Toolbar:
+> ![](res/originc07.png)
+> ![](res/originc08.png)
+> ![](res/originc09.png)
 
-![](res/originc07.png)
-
-![](res/originc08.png)
-
-![](res/originc09.png)
-
-Tip: 按住Ctrl +Shift同时点击，自动跳转到对应的C代码
+Tip: 对于菜单栏的menu, 按住Ctrl +Shift同时点击，自动跳转到对应的C代码
