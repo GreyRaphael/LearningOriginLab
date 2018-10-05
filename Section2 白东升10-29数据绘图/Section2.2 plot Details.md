@@ -7,6 +7,9 @@
     - [Line & symbol](#line--symbol)
     - [Double click the curve to operate](#double-click-the-curve-to-operate)
     - [Plot Axis](#plot-axis)
+    - [Plot Legend](#plot-legend)
+    - [Theme to Draw Graph](#theme-to-draw-graph)
+    - [Template to Draw Graph](#template-to-draw-graph)
 
 <!-- /TOC -->
 
@@ -118,3 +121,16 @@ Legend的update & reconstruct:
 - If delete the legend, you should Graph/New Legend to reconstruct the legend
 
 > Graph的其他对象，比如Text也拥有Properties和Programming Tool对话框
+
+## Theme to Draw Graph
+
+Tools/Theme Organizer
+> ![](res/theme01.png)
+
+还可以在一个Graph中Right Click, Copy theme, 然后粘贴到另一个Graph中；还可以right click保存该主题；
+
+## Template to Draw Graph
+
+File/Save As Theme,
+
+Select multi-Columns, Plot/User Templates/Template Library
