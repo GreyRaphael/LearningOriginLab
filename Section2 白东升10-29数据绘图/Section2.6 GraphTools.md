@@ -1,10 +1,15 @@
 # Toolbars
 
-- [Graph Tools](#graph-tools)
+<!-- TOC -->
+
+- [Toolbars](#toolbars)
     - [Tools](#tools)
+    - [Some other tools](#some-other-tools)
     - [Graph Tools](#graph-tools)
     - [Mask Tools](#mask-tools)
     - [Object Edit Tools](#object-edit-tools)
+
+<!-- /TOC -->
 
 Toolbars:
 
@@ -23,10 +28,8 @@ Toolbars:
 - **Screen Reader**(current layer);
 - **Data Reader**(only read data point), **Data annotation**, **Data cursor;**
 - **Data Selector**;
-
-    When finish the select, you can right click to edit the Selector
-
-    ![](res/graphTools02.png)
+    > When finish the select, you can right click to edit the Selector  
+    > ![](res/graphTools02.png)
 - **Selection on Active Plot**, **Selection on All Plot**;
 - **Mask on Active Plot, Mask on All Plot, Unmask on Active Plot, Unmask on All Plot**;
 - **Draw Data**(double click to draw a data, Esc to finish the operation);
@@ -34,8 +37,7 @@ Toolbars:
 - Arrow Tool, Curve Arrow Tool;
 - Line Tool, Polyline Tool(double click to finish), Freehand Draw Tool;
 - Rectangle Tool, Circle Tool(Ctrl +Draw the circle), Polygon Tool, Region Tool;
-
-    All these shapes contain "Programming Control" and "Properties"
+    > All these shapes contain "Programming Control" and "Properties"
 - Pan Tool(Hold A to move, wheel to Zoom);
 - Insert Equation(not work), Insert Word(don't use), Insert Excel(don't use), Insert Object(was powerful for MathType)
 - Insert Graph, Insert Worksheet;
@@ -81,10 +83,8 @@ Toolbars:
 - Unmask Range;
 - Change Mask Color;
 - Hide/Show Mask(only use in the Graph);
-
-    当断线的时候，Plot Details/Graph1/Display
-
-    ![](res/graphTools05.png)
+    > 当断线的时候，Plot Details/Graph1/Display, 将断线连接  
+    > ![](res/graphTools05.png)
 - Swap Mask;
 - Enable/Disable mask;
 
