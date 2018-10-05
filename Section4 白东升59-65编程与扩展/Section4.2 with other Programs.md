@@ -48,3 +48,21 @@ Tools/Copy Origin Sub-VI to LabView
 [Origin Extension](https://www.originlab.com/fileexchange/)
 
 比如，给出曲线的切线 <http://www.originlab.com/fileExchange/details.aspx?fid=227>
+
+## xFunction
+
+xFunction本质：已经编译好的OriginC程序
+> 自己写的originC程序编译之后，可以在IDE的command&result中调用，或者在scriptwindow中调用，或者在set value对话框调用  
+> 大量的数据采用x-function,少量的数据还是用点击
+
+```bash
+# window/command window中输入
+>>averagexy iy:=(col(a),col(b),col(c)) y:=col(e)
+```
+
+Tool/X-Function Builder: 判断两个数大小
+> ![](res/xfunction02.png)
+> ![](res/xfunction03.png)
+
+Now in the Command window, using my xfunction
+> ![](res/xfunction04.png)
