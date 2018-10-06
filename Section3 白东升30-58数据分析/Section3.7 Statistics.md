@@ -1,5 +1,7 @@
 # Statistics
 
+<!-- TOC -->
+
 - [Statistics](#statistics)
     - [Descriptive Statistics](#descriptive-statistics)
         - [Statistics on Columns](#statistics-on-columns)
@@ -15,17 +17,17 @@
         - [Distribution Fit](#distribution-fit)
         - [Normality Test](#normality-test)
     - [Hypothesis Testing](#hypothesis-testing)
-        - [理论(对于平均值)](#%E7%90%86%E8%AE%BA%E5%AF%B9%E4%BA%8E%E5%B9%B3%E5%9D%87%E5%80%BC)
-            - [单样本数据](#%E5%8D%95%E6%A0%B7%E6%9C%AC%E6%95%B0%E6%8D%AE)
-            - [双样本配对数据](#%E5%8F%8C%E6%A0%B7%E6%9C%AC%E9%85%8D%E5%AF%B9%E6%95%B0%E6%8D%AE)
-            - [双样本独立数据](#%E5%8F%8C%E6%A0%B7%E6%9C%AC%E7%8B%AC%E7%AB%8B%E6%95%B0%E6%8D%AE)
+        - [理论(对于平均值)](#理论对于平均值)
+            - [单样本数据](#单样本数据)
+            - [双样本配对数据](#双样本配对数据)
+            - [双样本独立数据](#双样本独立数据)
         - [Testing in Origin](#testing-in-origin)
             - [One-Sample Test](#one-sample-test)
             - [Pair-Sample Test](#pair-sample-test)
             - [Two-Sample Test](#two-sample-test)
-        - [理论(对于标准差) Test for Variance](#%E7%90%86%E8%AE%BA%E5%AF%B9%E4%BA%8E%E6%A0%87%E5%87%86%E5%B7%AE-test-for-variance)
-            - [单样本数据Test for Variance](#%E5%8D%95%E6%A0%B7%E6%9C%AC%E6%95%B0%E6%8D%AEtest-for-variance)
-            - [双样本数据Test for Variance](#%E5%8F%8C%E6%A0%B7%E6%9C%AC%E6%95%B0%E6%8D%AEtest-for-variance)
+        - [理论(对于标准差) Test for Variance](#理论对于标准差-test-for-variance)
+            - [单样本数据Test for Variance](#单样本数据test-for-variance)
+            - [双样本数据Test for Variance](#双样本数据test-for-variance)
         - [Variance Test in Origin](#variance-test-in-origin)
             - [One-Sample Test for variance](#one-sample-test-for-variance)
             - [Two-Sample Test for variance](#two-sample-test-for-variance)
@@ -44,7 +46,7 @@
         - [Pair-Sample Wilcoxon Signed Rank Test](#pair-sample-wilcoxon-signed-rank-test)
         - [Two-Sample Kolmogorov-Smirnov Test](#two-sample-kolmogorov-smirnov-test)
         - [Mann-Whitney Test](#mann-whitney-test)
-        - [Kruskal-Wallis  ANOVA](#kruskal-wallis-anova)
+        - [Kruskal-Wallis  ANOVA](#kruskal-wallis--anova)
         - [Mood's Median Test](#moods-median-test)
         - [Friedman ANOVA](#friedman-anova)
         - [(NPH)K independent Samples](#nphk-independent-samples)
@@ -54,7 +56,7 @@
         - [Kaplan-Meier Estimator](#kaplan-meier-estimator)
         - [Cox Model Estimator](#cox-model-estimator)
         - [Weibull Fit](#weibull-fit)
-    - [Power & Sample Size](#power-sample-size)
+    - [Power & Sample Size](#power--sample-size)
         - [(PSS) One-Sample T-Test: there is no input data](#pss-one-sample-t-test-there-is-no-input-data)
         - [(PSS) Two-Sample T-Test](#pss-two-sample-t-test)
         - [(PSS) Paired-Sample T-Test](#pss-paired-sample-t-test)
@@ -64,13 +66,15 @@
         - [(PSS) One-Variance Test](#pss-one-variance-test)
         - [(PSS) Two-Variance Test](#pss-two-variance-test)
     - [ROC Curve](#roc-curve)
-        - [ROC Curve](#roc-curve)
+        - [ROC Curve](#roc-curve-1)
     - [Multivariate Analysis](#multivariate-analysis)
         - [Principal Component Analysis](#principal-component-analysis)
         - [Partial Least Squares](#partial-least-squares)
         - [K-Means Cluster Analysis](#k-means-cluster-analysis)
         - [Hierarchical Cluster Analysis](#hierarchical-cluster-analysis)
         - [Discriminant Analysis](#discriminant-analysis)
+
+<!-- /TOC -->
 
 ![](res/statistics00.png)
 
@@ -80,9 +84,8 @@
 
 ### Statistics on Columns
 
-![](res/statistics02.png)
-
-![](res/statistics03.png)
+> ![](res/statistics02.png)  
+> ![](res/statistics03.png)
 
 $$
 \lambda=
@@ -97,15 +100,13 @@ $$
 
 ### Statistics on Rows
 
-![](res/statistics04.png)
-
 Just like the "Statistics on Columns"
+> ![](res/statistics04.png)
 
 ### Cross Tabulation
 
 It is widely used to analysis categorical data.
-
-![](res/statistics05.png)
+> ![](res/statistics05.png)
 
 ### Correlation Coefficient
 
@@ -151,7 +152,7 @@ Partial correlation coefficient is used to describe the relation between two var
 
 ### Discrete Frequency
 
-![](res/descriptive01)
+![](res/descriptive01.png)
 
 ### Frequency Counts
 
@@ -192,9 +193,11 @@ $$
 
 ## Hypothesis Testing
 
+主要分为：期望检验，方差检验
+
 ![](res/hypo01.png)
 
-t-Test都是normal distribution
+> t-Test都是normal distribution
 
 ### 理论(对于平均值)
 
@@ -377,13 +380,16 @@ compare the means of two samples, which are stored in rows
 
 ANOVA = Analysis of Variance
 
-examine the variance of a dependent variable
+**目标变量**的控制**因素**水平及其**影响显著性**
+> eg. 比如考察温度、湿度对产量的影响，那么温度、湿度就是因素，产量就是目标变量  
+> 不同的温度值表示不同的水平，对湿度也是同意的道理
 
 ![](res/anova01.png)
 
 ### One-Way ANOVA
 
-![](res/anova02.png)
+单因素ANOVA
+> ![](res/anova02.png)
 
 AVOVA report Table:
 
@@ -391,7 +397,8 @@ AVOVA report Table:
 
 ### Two-Way ANOVA
 
-![](res/anova04.png)
+双因素ANOVA
+> ![](res/anova04.png)
 
 Interactions: two factor have interaction or not;
 
@@ -400,6 +407,9 @@ AVOVA report Table:
 ![](res/anova05.png)
 
 ### One-Way Repeated Measure ANOVA
+
+同一组对象进行所有因素水平的实验。
+> 那么实验可能不是独立的，因为可能和之前的实验有关
 
 ![](res/anova06.png)
 
@@ -422,8 +432,8 @@ Nonparametric Tests不知道数据的特征
 
 ### One-Sample Wilcoxon Signed Rank Test
 
-- Test Median;
-- 假设数据对称;
+检验样本中位数是否符合给定的值
+> 假设数据分布对称
 
 ![](res/nonparametric02.png)
 
@@ -511,11 +521,12 @@ $$
 
 ![](res/survival01.png)
 
-研究必然事件随时间发生规律的方法(获得事件的时间特征)
+研究必然事件随时间发生规律的方法(获得事件发生的时间特征)
+> 小动物药物注射实验，评价药物毒性；
 
 ### Kaplan-Meier Estimator
 
-给出样本的存活函数，可以用于计算半衰期等等
+给出样本的存活函数，表示样本至少存活到t的概率大小，可以用于计算半衰期等等
 
 $$
 \begin{aligned}
@@ -526,14 +537,15 @@ $$
 $$
 
 ![](res/survival02.png)
-
-没有截断数据Censoring Value的，不用存活分析;不要同时勾选这两项
+> 没有截断数据Censoring Value的，不用存活分析
 
 ![](res/survival03.png)
+> 不要同时勾选这两项
 
 ### Cox Model Estimator
 
-比例风险模型，对风险函数的回归分析，预测风险随x的变化
+比例风险模型，对风险函数的回归分析，预测风险随影响因素x的变化
+> $\beta>0$表示x增大，风险增加，那么x是危险因素; $\beta<0$, x是保护因素。
 
 $$
 \lambda(X,t)=\lambda_0(t)e^{X\vec{\beta}+\vec{\omega}}
@@ -577,6 +589,8 @@ $$
 - 容量分析：达到给定功效，所需要的最小样本容量
 
 ### (PSS) One-Sample T-Test: there is no input data
+
+PSS不需要实验数据，只需要将假设检验的结果输入即可
 
 ![](res/power02.png)
 
