@@ -1,14 +1,18 @@
 # Data Analysis Introduction
 
+<!-- TOC -->
+
 - [Data Analysis Introduction](#data-analysis-introduction)
     - [Analysis](#analysis)
         - [Mathematics](#mathematics)
         - [Data Manipulation](#data-manipulation)
         - [Fitting](#fitting)
         - [Signal processing](#signal-processing)
-        - [Peaks & Baseline: 谱峰和基线识别](#peaks-baseline-%E8%B0%B1%E5%B3%B0%E5%92%8C%E5%9F%BA%E7%BA%BF%E8%AF%86%E5%88%AB)
+        - [Peaks & Baseline: 谱峰和基线识别](#peaks--baseline-谱峰和基线识别)
     - [Statistics](#statistics)
     - [Image](#image)
+
+<!-- /TOC -->
 
 数据分析功能都在工具栏的 Analysis, Statistics, Image中
 
@@ -17,14 +21,12 @@
 ### Mathematics
 
 插值，算术运算，微积分，多曲线平均
-
-![](res/introduction01.png)
+> ![](res/introduction01.png)
 
 ### Data Manipulation
 
 Subtract reference data: 用于数据校正
-
-![](res/introduction02.png)
+> ![](res/introduction02.png)
 
 ### Fitting
 
