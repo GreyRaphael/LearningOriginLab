@@ -1,8 +1,14 @@
 # Origin Template
 
+<!-- TOC -->
+
 - [Origin Template](#origin-template)
-    - [一组数据的分析模板](#%E4%B8%80%E7%BB%84%E6%95%B0%E6%8D%AE%E7%9A%84%E5%88%86%E6%9E%90%E6%A8%A1%E6%9D%BF)
-    - [利用Import Wizard批处理数据](#%E5%88%A9%E7%94%A8import-wizard%E6%89%B9%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE)
+    - [一组数据的分析模板](#一组数据的分析模板)
+    - [利用Import Wizard批处理数据](#利用import-wizard批处理数据)
+
+<!-- /TOC -->
+
+分析模板：完成若干数据分析操作的一个流程
 
 建立一个分析模板，然后导入一个数据之后，自动进行计算
 
