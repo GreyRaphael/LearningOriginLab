@@ -1,21 +1,22 @@
 # Signal Processing
 
+<!-- TOC -->
+
 - [Signal Processing](#signal-processing)
     - [Signal Processing/Smooth](#signal-processingsmooth)
-        - [Mehtod](#mehtod)
     - [Filter](#filter)
         - [Signal Processing/FFT Filters](#signal-processingfft-filters)
-            - [频率调制的滤波方法](#%E9%A2%91%E7%8E%87%E8%B0%83%E5%88%B6%E7%9A%84%E6%BB%A4%E6%B3%A2%E6%96%B9%E6%B3%95)
-            - [振幅调制的滤波方法](#%E6%8C%AF%E5%B9%85%E8%B0%83%E5%88%B6%E7%9A%84%E6%BB%A4%E6%B3%A2%E6%96%B9%E6%B3%95)
+            - [频率调制的滤波方法](#频率调制的滤波方法)
+            - [振幅调制的滤波方法](#振幅调制的滤波方法)
         - [Signal Processing/IIR Filter](#signal-processingiir-filter)
     - [Fourier Analysis](#fourier-analysis)
-        - [Signal Processing/FFT/FFT…(Fast Fourier Transform)](#signal-processingfftfft%E2%80%A6fast-fourier-transform)
-            - [原理](#%E5%8E%9F%E7%90%86)
+        - [Signal Processing/FFT/FFT…(Fast Fourier Transform)](#signal-processingfftfftfast-fourier-transform)
+            - [原理](#原理)
             - [FFT in Origin](#fft-in-origin)
-        - [Signal Processing/FFT/IFFT…](#signal-processingfftifft%E2%80%A6)
-        - [Signal Processing/STFT…(Short Time Fourier Transform)](#signal-processingstft%E2%80%A6short-time-fourier-transform)
+        - [Signal Processing/FFT/IFFT…](#signal-processingfftifft)
+        - [Signal Processing/STFT…(Short Time Fourier Transform)](#signal-processingstftshort-time-fourier-transform)
     - [Signal Processing/Convolution](#signal-processingconvolution)
-        - [Convolution原理](#convolution%E5%8E%9F%E7%90%86)
+        - [Convolution原理](#convolution原理)
     - [Signal Processing/Coherence](#signal-processingcoherence)
     - [Signal Processing/Correlation](#signal-processingcorrelation)
     - [Signal Processing/Hilbert Transform](#signal-processinghilbert-transform)
@@ -29,27 +30,27 @@
         - [Signal Processing/Wavelet/denoise](#signal-processingwaveletdenoise)
         - [Signal Processing/Wavelet/Smooth](#signal-processingwaveletsmooth)
 
+<!-- /TOC -->
+
 ![](res/signal01.png)
 
 ## Signal Processing/Smooth
 
-![](res/signal02.png)
-
-Points of Window: value大, 平滑程度大
-
-### Mehtod
-
 Adjacent-Averaging: 局部数据平均
+> ![](res/signal02.png)  
+> Points of Window: value大, 平滑程度大
 
-Savitzky-Golay: 局部数据polynomial回归，一般操作首选这种操作
+Savitzky-Golay: 局部数据多项式回归，一般操作首选这种操作
+> ![](res/signal03.png)
 
-![](res/signal03.png)
+Percentile Filter: 局部数据计算一个指定的分位值,将原始数据替换为该分位值,适合脉冲噪声; 
+> ![](res/signal04.png)  
+> Percentile越小，越往下偏
 
-Percentile Filter: 局部数据计算一个指定的分位值,将原始数据替换为该分位值,适合脉冲噪声; Percentile越小，越往下偏
+FFT Filter: Fast Fourier Transform, 过滤高频信号实现曲线平滑
+> Cutoff percentage: 越小,越平滑
 
-![](res/signal04.png)
-
-- FFT Filter: Fast Fourier Transform, 过滤高频信号
+Other Methods:
 - Lowess:
 - Loess:
 - Binomial:
@@ -91,10 +92,10 @@ $$
 
 <https://www.originlab.com/doc/X-Function/ref/fft_filters>
 
-1. Low Pass
-1. High Pass
-1. Band Pass:范围内的通过
-1. Band Block:范围外的通过
+1. Low Pass: 低频通过
+2. High Pass: 高频通过
+3. Band Pass:范围内的通过
+4. Band Block:范围外的通过
 
 Cutoff Frequency: 和下图的红色纵线关联
 
@@ -119,7 +120,9 @@ Cutoff Frequency: 和下图的红色纵线关联
 
 ### Signal Processing/FFT/FFT…(Fast Fourier Transform)
 
-根据周期性，将长序列的离散Fourier Transform变成短序列的
+离散Fourier Transform当N增大时，运算量明显增大~$O(N^2)$, 而FFT可以解决这个问题
+
+根据周期性，将长序列的离散Fourier Transform变成短序列的可以减少运算量
 
 #### 原理
 
@@ -170,6 +173,7 @@ Plot tab中最常用的是Amplitude/Phase
 ### Signal Processing/FFT/IFFT…
 
 ![](res/fourier10.png)
+> `*`表示取共轭序列
 
 ![](res/fourier11.png)
 
@@ -193,15 +197,15 @@ $$
 
 ### Convolution原理
 
-卷积的重要的物理意义是：一个函数（如：单位响应）在另一个函数（如：输入信号）上的加权叠加。
+卷积的重要的物理意义是：一个函数在另一个函数上的加权叠加。
 
 $$
 \begin{aligned}
-&\text{线性卷积}
+&\text{线性卷积: 序列在普通坐标的左移右移}
 \\\\
 &f_1(t)*f_2(t)=\int_{-\infty}^{+\infty}{f_1(\xi)f_2(t-\xi)d\xi}
 \\\\
-&\text{圆周卷积}
+&\text{圆周卷积: 序列在环形坐标的逆时针，顺时针}
 \\\\
 &f_1(t)\circledast f_2(t)=\int_{-\infty}^{+\infty}{f_1(\xi)\tilde{f_2}(t-\xi)d\xi}
 \\\\
@@ -214,6 +218,9 @@ $$
 &\mathscr{F}[f_1(n)*f_2(n)]=\mathscr{F}[f_1(n)]\cdot\mathscr{F}[f_2(n)]
 \\\\
 &f_1(n)*f_2(n)=\mathscr{F}^{-1}[\mathscr{F}[f_1(n)]\cdot\mathscr{F}[f_2(n)]]
+\\\\
+&f_1(n) =\mathscr{F}^{-1}[ \frac{\mathscr{F}[f_1(n) *f_2(n)]}{\mathscr{F}[f_2(n)]}] 
+
 \end{aligned}
 $$
 
@@ -229,7 +236,7 @@ $$
 \begin{aligned}
 &F_1(k)=\mathscr{F}[f_1(n)], F_2(k)=\mathscr{F}[f_2(n)]
 \\\\
-&C(k)=\frac{|F_1^*{k}F_2(k)|^2}{F_1(k)F_1^*(k)\cdot F_2(k)F_2^*(k)}
+&C(k)=\frac{|F_1^*(k)F_2(k)|^2}{F_1(k)F_1^*(k)\cdot F_2(k)F_2^*(k)}
 \end{aligned}
 $$
 
@@ -281,8 +288,6 @@ $$
 
 Decimation is the process of reducing the sampling rate of a signal. It is usually used to reduce the size of the data. Origin supports two filters in the decimation tool, which are FIR filter and Moving Average filter.
 
-![](res/fourier19.png)
-
 ## Signal Processing/Wavelet
 
 ![](res/wave01.png)
@@ -297,7 +302,9 @@ $$
 \end{aligned}
 $$
 
-通过a,b的对小波基函数的伸缩，平移操作，对信号进行多尺度的分析(小波变换能够自动适应信号的时频特性，可以聚焦到任意尺度，从而获得信号的所有细节，对于信号分析以及非稳态信号分析作用强大)
+通过a,b对小波基函数的伸缩，平移操作，对信号进行多尺度的分析(小波变换能够自动适应信号的时频特性，可以聚焦到任意尺度，从而获得信号的所有细节，对于信号分析以及非稳态信号分析作用强大)
+> a为伸缩因子，b为平移因子  
+> 通过连续小波变换，可以得到信号在任意尺度，任何位置的频率信息
 
 ### Signal Processing/Wavelet/Continuous Wavelet
 
