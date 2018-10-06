@@ -1,5 +1,7 @@
 # Mathematics
 
+<!-- TOC -->
+
 - [Mathematics](#mathematics)
     - [Interpolation](#interpolation)
         - [Analysis/Mathematics/Interpolate-Extrapolate Y from X](#analysismathematicsinterpolate-extrapolate-y-from-x)
@@ -20,34 +22,31 @@
         - [XYZ surface Area](#xyz-surface-area)
         - [Average Multiple Curve](#average-multiple-curve)
 
+<!-- /TOC -->
+
 ## Interpolation
 
-- 利用新数据点左右两侧的数据点：内插
+- 利用新数据点左右两侧的数据点：内插(Interpolate)
 - 利用新数据点一侧的数据点：外插(extrapolate)
-
-![](res/math01.png)
+> ![](res/math01.png)
 
 ### Analysis/Mathematics/Interpolate-Extrapolate Y from X
 
 ![](res/math02.png)
-
 - Linear: easy
 - Cubic Spline: …
-- Cubic B-Spline: Bessel
-- Smooth Factor: 数值越大，越平滑，但是越偏离实际情况
+- Cubic B-Spline: Bessel, Smooth Factor: 数值越大，越平滑，但是越偏离实际情况
 - Akima Spline:
 
 ### Analysis/Mathematics/Trace Interpolation
 
 在**原有范围**基础上直接均匀插入点
-
-![](res/math03.png)
+> ![](res/math03.png)
 
 ### Analysis/Mathematics/Interpolate-Extrapolation
 
 **自定义范围**，均匀插入点
-
-![](res/math04.png)
+> ![](res/math04.png)
 
 ### Analysis/Mathematics/Interpolate Z from XY
 
@@ -56,8 +55,7 @@
 ### Analysis/Mathematics/3D Interpolation
 
 4维数据
-
-![](res/math06.png)
+> ![](res/math06.png)
 
 ### Analysis/Mathematics/XYZ Trace Interpolation
 
@@ -73,13 +71,12 @@ So far Interpolation is finished
 
 ### Set Column Values: too easy
 
-Ctrl +Q
+<kbd>Ctrl</kbd>+<kbd>Q</kbd>
 
 ### Simple Curve math
 
-and the **Use Common Range** mean interpolation or extrapolation
-
-![](res/math10.png)
+**Use Common Range** mean interpolation or extrapolation
+> ![](res/math10.png)
 
 ### Normalize Columns
 
@@ -103,9 +100,8 @@ $$
 
 ### Integrate
 
-Baseline is very important
-
-![](res/math15.png)
+Baseline is very important: 红色表示将首尾点连线作为baseline
+> ![](res/math15.png)
 
 $$
 \int_{x_1}^{x_n}{f\left( x \right) dx}=\sum_{i=1}^{n-1}{\left( x_{i+1}-x_i \right)}\frac{f\left( x_{i+1} \right) +f\left( x_i \right)}{2}
