@@ -1,9 +1,13 @@
 # Peaks And Baseline
 
+<!-- TOC -->
+
 - [Peaks And Baseline](#peaks-and-baseline)
-    - [Peaks & Baseline/Multiple Peak Fit: 半自动](#peaks-baselinemultiple-peak-fit-%E5%8D%8A%E8%87%AA%E5%8A%A8)
-    - [Peaks & Baseline/Peak Analyzer/QuickPeaks: 全自动](#peaks-baselinepeak-analyzerquickpeaks-%E5%85%A8%E8%87%AA%E5%8A%A8)
-    - [Peaks & Baseline/Peak Analyzer/OpenDialog](#peaks-baselinepeak-analyzeropendialog)
+    - [Peaks & Baseline/Multiple Peak Fit: 半自动](#peaks--baselinemultiple-peak-fit-半自动)
+    - [Peaks & Baseline/Peak Analyzer/QuickPeaks: 全自动](#peaks--baselinepeak-analyzerquickpeaks-全自动)
+    - [Peaks & Baseline/Peak Analyzer/OpenDialog](#peaks--baselinepeak-analyzeropendialog)
+
+<!-- /TOC -->
 
 ![](res/peakbase01.png)
 
