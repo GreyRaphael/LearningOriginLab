@@ -1,5 +1,7 @@
 # Fitting
 
+<!-- TOC -->
+
 - [Fitting](#fitting)
     - [Fitting/Linear Fit](#fittinglinear-fit)
     - [Fitting/Polynominal](#fittingpolynominal)
@@ -20,7 +22,7 @@
         - [Others](#others)
         - [FitLinearCurve1 worksheet](#fitlinearcurve1-worksheet)
     - [Fitting/Nonlinear](#fittingnonlinear)
-        - [Fitting/Nonlinear Curve fit, or Ctrl +Y](#fittingnonlinear-curve-fit-or-ctrl-y)
+        - [Fitting/Nonlinear Curve fit](#fittingnonlinear-curve-fit)
             - [Code Tab](#code-tab)
             - [Parameter Tab](#parameter-tab)
             - [Bound Tab](#bound-tab)
@@ -30,7 +32,7 @@
         - [Fitting/Simulate Surface](#fittingsimulate-surface)
     - [Fitting-User defined](#fitting-user-defined)
     - [Other Fitting](#other-fitting)
-        - [Fitting/Single Peak fit: 只是Nonlinear curve fit的特殊情况](#fittingsingle-peak-fit-%E5%8F%AA%E6%98%AFnonlinear-curve-fit%E7%9A%84%E7%89%B9%E6%AE%8A%E6%83%85%E5%86%B5)
+        - [Fitting/Single Peak fit: 只是Nonlinear curve fit的特殊情况](#fittingsingle-peak-fit-只是nonlinear-curve-fit的特殊情况)
         - [Fitting/Exponential Fit](#fittingexponential-fit)
         - [Fitting/Sigmoidal](#fittingsigmoidal)
         - [Fitting/Compare Datasets](#fittingcompare-datasets)
@@ -38,23 +40,25 @@
         - [Fitting/Compare Models](#fittingcompare-models)
             - [Example 02](#example-02)
         - [Fitting/Rank Models](#fittingrank-models)
-    - [拟合结果](#%E6%8B%9F%E5%90%88%E7%BB%93%E6%9E%9C)
-        - [残差分析](#%E6%AE%8B%E5%B7%AE%E5%88%86%E6%9E%90)
+    - [拟合结果](#拟合结果)
+        - [残差分析](#残差分析)
             - [Residual vs independent](#residual-vs-independent)
             - [Residual vs order of data](#residual-vs-order-of-data)
+
+<!-- /TOC -->
 
 最小二乘法(less-square method)
 
 $$
 \begin{aligned}
 
-&\left( x_i,y_i \right) \text{i=1,2,3,...,n}
+&\left( x_i,y_i \right) \text{i=1, 2, 3, ..., n}
 \\
 &y=f\left( x;\vec{\beta} \right)
 \\
 &\text{确定}\vec{\beta}=\vec{\beta}^*,\text{使}\sum_{i=1}^n{w\left( x_i \right) \left[ y_i-f\left( x_i;\vec{\beta}^* \right) \right] ^2=\underset{\vec{\beta}}{\min}\sum_{i=1}^n{w\left( x_i \right) \left[ y_i-f\left( x_i;\vec{\beta}^* \right) \right] ^2}}
 \\
-&\frac{\partial}{\partial \vec{\beta}}\left. \sum_{i=1}^n{w\left( x_i \right) \left[ y_i-f\left( x_i;\vec{\beta} \right) \right] ^2} \right|_{\vec{\beta}=\vec{\beta}^*}
+&\frac{\partial}{\partial \vec{\beta}}\left. \sum_{i=1}^n{w\left( x_i \right) \left[ y_i-f\left( x_i;\vec{\beta} \right) \right] ^2} \right|_{\vec{\beta}=\vec{\beta}^*}=0 \text{得到}\vec{\beta}^*
 \\
 &\text{拟合方程:\ }y=f\left( x;\vec{\beta}^* \right)
 
@@ -96,8 +100,7 @@ $$
 ![](res/fit01.png)
 
 ![](res/fit02.png)
-
-ANOVA: analysis of Variance
+> ANOVA: analysis of Variance
 
 ![](res/fit03.png)
 
@@ -202,7 +205,7 @@ The right one means: the data of this column cannot be edited
 
 ![](res/nonlinear01.png)
 
-### Fitting/Nonlinear Curve fit, or Ctrl +Y
+### Fitting/Nonlinear Curve fit
 
 ![](res/nonlinear02.png)
 
@@ -221,13 +224,13 @@ Enzyme|酶
 Pharmacology|药理学
 Rheology|流变学
 
-And the Replica is very important: 多个峰
-
 ![](res/nonlinear04.png)
 
 Replica and Fit Control is important, and others are the same as mentioned
+> 多个峰的时候采用replica来指定是多少个Gauss峰  
+> fit control中的Iteration表示要么达到tolerance, 要么达到次数，fitting就会终止
 
-自定义fitting才使用Derivative Delta:计算函数在各个参数上的偏导数，采用的是差分法
+自定义拟合才使用Derivative Delta:计算函数在各个参数上的偏导数，是最小二乘求极值的步骤，采用的是差分法
 
 ![](res/nonlinear05.png)
 
@@ -237,29 +240,25 @@ Replica and Fit Control is important, and others are the same as mentioned
 
 - Parameter Init: Parameter initialize
 - Enable Linear Constraint:
-
-    ![](res/nonlinear07.png)
+    > ![](res/nonlinear07.png)
 
 #### Parameter Tab
 
 ![](res/nonlinear08.png)
 
-- 输入初始值value，可能提高迭代效率，迭代来源于非线性近似为线性的过程中，引入1阶偏导，所以差分形式出现了前后参数的差别，今儿形成联系，可以进行迭代
+- 输入初始值value，可能提高迭代效率，迭代来源于非线性近似为线性的过程中，引入1阶偏导，所以差分形式出现了前后参数的差别，进而形成联系，可以进行迭代
 - 可能出现"Fit didn't converge"不收敛
 
 #### Bound Tab
 
 指定各个参数的范围
+> ![](res/nonlinear09.png)  
+> ![](res/nonlinear10.png)
 
-![](res/nonlinear09.png)
-
-![](res/nonlinear10.png)
-
-Simplex: 给参数赋予大体趋势与原始数据相似的值，效果等同于在parameters tab手动调节参数
+Simplex: 给参数赋予大体趋势与原始数据相似的值，效果等同于在parameters tab手动调节初始值
 
 Chi square: 残差平方和，结果在Message Tab中显示
-
-![](res/nonlinear11.png)
+> ![](res/nonlinear11.png)
 
 ![](res/nonlinear12.png)
 
@@ -286,37 +285,28 @@ Chi square: 残差平方和，结果在Message Tab中显示
 
 ## Fitting-User defined
 
-Fitting Function Organizer:
+Tools/Fitting Function Organizer
+> ![](res/fit12.png)
 
-1. Tools/Fitting Function Organizer
-1. F9
+FunctionType: 建议User-defined
+> ![](res/fit13.png)
 
-![](res/fit12.png)
-
-FunctionType
-
-![](res/fit13.png)
-
-FunctionForm
-
-![](res/fit14.png)
+FunctionForm: 建议OriginC
+> ![](res/fit14.png)
 
 - Y-Script: 可以向下兼容，速度慢
-- Expression: only one independent variable
-- Equations: >=1 independent variables
+- Expression: 只有一个因变量
+- Equations: >=1因变量
 - Origin C: most common
 
 ![](res/userFunc01.png)
-
-写完函数，点击Compile, return to dialog
-
-![](res/userFunc02.png)
+> 写完函数，点击Compile, return to dialog
 
 点击，赋初值，确定上下限
-
-![](res/userFunc03.png)
+> ![](res/userFunc02.png)
 
 初始化值，然后Compile
+> ![](res/userFunc03.png)
 
 ![](res/userFunc04.png)
 
@@ -347,7 +337,7 @@ FunctionForm
 
 ### Fitting/Compare Datasets
 
-两组数据，同一个Model，是否显著差异
+两组数据，同一个Model，是否显著差异; 比对的是拟合后的report table
 
 #### Example 01
 
@@ -365,7 +355,7 @@ FunctionForm
 
 ### Fitting/Compare Models
 
-同一组数据，两种拟合Model，是否存在显著差异
+同一组数据，两种拟合Model，是否存在显著差异;比对的是拟合后的report table
 
 #### Example 02
 
