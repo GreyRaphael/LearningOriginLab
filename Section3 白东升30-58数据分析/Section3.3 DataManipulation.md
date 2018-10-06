@@ -1,5 +1,7 @@
 # Data Manipulation
 
+<!-- TOC -->
+
 - [Data Manipulation](#data-manipulation)
     - [Baseline](#baseline)
     - [Subtract Straight Line](#subtract-straight-line)
@@ -8,6 +10,8 @@
     - [Reduce by Group](#reduce-by-group)
     - [Reduce to Evenly spaced X](#reduce-to-evenly-spaced-x)
     - [Horizontal, Vertical Translate](#horizontal-vertical-translate)
+
+<!-- /TOC -->
 
 ## Baseline
 
@@ -23,12 +27,10 @@ baseline经常用于光谱的谱图, 数据会覆盖原始数据,建议备份后
 
 Double click two point to subtract the baseline,
 通常配合这个使用
+> ![](res/mani03.png)
 
-![](res/mani03.png)
-
-其中B是用Draw Data画出来的
-
-![](res/mani04.png)
+其中B就是用Draw Data画出来的, 一般是沿着曲线的多个点构成的不规则基线
+> ![](res/mani04.png)
 
 ## Subtract Referenced Data
 
