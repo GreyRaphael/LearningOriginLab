@@ -1,5 +1,7 @@
 # Origin Image
 
+<!-- TOC -->
+
 - [Origin Image](#origin-image)
     - [Image/Adjustments](#imageadjustments)
     - [Image/Arithmetic Transform](#imagearithmetic-transform)
@@ -7,10 +9,11 @@
     - [Image/Geometric Transform](#imagegeometric-transform)
     - [Image/Spatial Filters](#imagespatial-filters)
     - [Export](#export)
-    - [数字图像处理](#%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86)
+    - [数字图像处理](#数字图像处理)
+
+<!-- /TOC -->
 
 For Bitmap
-
 - single channel bitmap(greyscale)
 - 3-channel bitmap(RGB)
 
@@ -48,6 +51,8 @@ Convert to Image: only for matirx
 ![](res/image06.png)
 
 ## Image/Spatial Filters
+
+空间滤镜功能
 
 ![](res/image07.png)
 
